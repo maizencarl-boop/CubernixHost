@@ -1,0 +1,620 @@
+/* CubernixHosting Topbar */
+
+.cubernix-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    min-height: 64px;
+
+    padding: 10px 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(24, 27, 36, 0.92);
+
+    border-bottom: 1px solid var(--cubernix-border);
+
+    backdrop-filter: blur(14px);
+}
+
+
+/* Left */
+
+.cubernix-topbar-left {
+    min-width: 0;
+}
+
+
+.cubernix-topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+
+.cubernix-topbar-brand img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    border-radius: 9px;
+}
+
+
+.cubernix-topbar-title {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    color: var(--cubernix-text);
+}
+
+
+.cubernix-topbar-subtitle {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    color: var(--cubernix-muted);
+}
+
+
+/* Actions */
+
+.cubernix-topbar-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* Standard buttons */
+
+.cubernix-topbar-button {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: 1px solid var(--cubernix-border);
+
+    border-radius: 9px;
+
+    background: var(--cubernix-surface);
+
+    color: var(--cubernix-text);
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.cubernix-topbar-button:hover {
+    background: var(--cubernix-surface-hover);
+
+    border-color:
+        rgba(88, 101, 242, 0.35);
+
+    transform: translateY(-1px);
+}
+
+
+/* Notification badge */
+
+.cubernix-topbar-button.has-notifications::after {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--cubernix-primary);
+
+    box-shadow:
+        0 0 0 2px var(--cubernix-surface);
+}
+
+
+/* Notification panel */
+
+.cubernix-notification-panel {
+    position: fixed;
+
+    top: 72px;
+    right: 20px;
+
+    z-index: 1200;
+
+    width: min(360px, calc(100vw - 28px));
+
+    max-height: 480px;
+
+    overflow: hidden;
+
+    background: rgba(24, 27, 36, 0.98);
+
+    border: 1px solid var(--cubernix-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(16px);
+}
+
+
+.cubernix-notification-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border-bottom: 1px solid var(--cubernix-border);
+}
+
+
+.cubernix-notification-header > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.cubernix-notification-header h3 {
+    margin: 0;
+
+    font-size: 15px;
+
+    color: var(--cubernix-text);
+}
+
+
+.cubernix-notification-count {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 20px;
+    height: 20px;
+
+    padding: 0 6px;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    background: var(--cubernix-primary);
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.cubernix-notification-clear {
+    padding: 5px 8px;
+
+    border: 0;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: var(--cubernix-muted);
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.cubernix-notification-clear:hover {
+    color: var(--cubernix-text);
+
+    background:
+        var(--cubernix-surface-hover);
+}
+
+
+.cubernix-notification-list {
+    max-height: 410px;
+
+    overflow-y: auto;
+}
+
+
+.cubernix-notification-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    box-sizing: border-box;
+
+    border: 0;
+
+    border-bottom: 1px solid var(--cubernix-border);
+
+    background: transparent;
+
+    color: var(--cubernix-text);
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.cubernix-notification-item:hover {
+    background:
+        var(--cubernix-surface-hover);
+}
+
+
+.cubernix-notification-item.read {
+    opacity: 0.55;
+}
+
+
+.cubernix-notification-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background:
+        rgba(88, 101, 242, 0.14);
+
+    font-size: 15px;
+}
+
+
+.cubernix-notification-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+
+.cubernix-notification-content strong {
+    font-size: 12px;
+}
+
+
+.cubernix-notification-content small {
+    color: var(--cubernix-muted);
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+.cubernix-notification-empty {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    min-height: 180px;
+
+    padding: 20px;
+
+    color: var(--cubernix-muted);
+
+    text-align: center;
+}
+
+
+.cubernix-notification-empty span {
+    font-size: 26px;
+}
+
+
+.cubernix-notification-empty strong {
+    color: var(--cubernix-text);
+
+    font-size: 13px;
+}
+
+
+.cubernix-notification-empty small {
+    font-size: 11px;
+}
+
+
+/* More menu */
+
+.cubernix-more-wrapper {
+    position: relative;
+}
+
+
+.cubernix-more-menu {
+    position: absolute;
+
+    top: calc(100% + 9px);
+    right: 0;
+
+    z-index: 1100;
+
+    width: 190px;
+
+    padding: 7px;
+
+    background: rgba(24, 27, 36, 0.98);
+
+    border: 1px solid var(--cubernix-border);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(16px);
+}
+
+
+.cubernix-more-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 0 11px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--cubernix-text);
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.cubernix-more-item:hover {
+    background:
+        var(--cubernix-surface-hover);
+}
+
+
+.cubernix-more-item.danger {
+    color: #ed4245;
+}
+
+
+.cubernix-more-divider {
+    height: 1px;
+
+    margin: 6px 4px;
+
+    background: var(--cubernix-border);
+}
+
+
+/* User */
+
+.cubernix-user-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-height: 40px;
+
+    padding: 4px 10px 4px 5px;
+
+    border: 1px solid var(--cubernix-border);
+
+    border-radius: 10px;
+
+    background: var(--cubernix-surface);
+
+    color: var(--cubernix-text);
+
+    cursor: pointer;
+}
+
+
+.cubernix-user-avatar {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 31px;
+    height: 31px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: var(--cubernix-primary);
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.cubernix-user-info {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.cubernix-user-name {
+    font-size: 12px;
+    font-weight: 650;
+}
+
+
+.cubernix-user-role {
+    margin-top: 1px;
+
+    font-size: 10px;
+
+    color: var(--cubernix-muted);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .cubernix-topbar {
+        min-height: 60px;
+
+        padding: 9px 12px 9px 68px;
+    }
+
+
+    .cubernix-topbar-brand img {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .cubernix-topbar-title {
+        font-size: 15px;
+    }
+
+
+    .cubernix-topbar-subtitle {
+        display: none;
+    }
+
+
+    .cubernix-topbar-actions {
+        gap: 5px;
+    }
+
+
+    .cubernix-topbar-button {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .cubernix-notification-panel {
+        top: 58px;
+
+        right: 10px;
+
+        width: calc(100vw - 20px);
+
+        max-height: calc(100vh - 75px);
+    }
+
+
+    .cubernix-notification-list {
+        max-height: calc(100vh - 145px);
+    }
+
+
+    .cubernix-more-menu {
+        position: fixed;
+
+        top: 59px;
+
+        right: 10px;
+
+        width: 210px;
+    }
+
+
+    .cubernix-user-button {
+        width: 36px;
+        height: 36px;
+
+        padding: 3px;
+
+        justify-content: center;
+    }
+
+
+    .cubernix-user-info {
+        display: none;
+    }
+
+
+    .cubernix-user-avatar {
+        width: 28px;
+        height: 28px;
+    }
+
+  }
