@@ -9,7 +9,8 @@
         "cubernix.css",
         "components/sidebar.css",
         "components/mobile-menu.css",
-        "components/dashboard.css"
+        "components/dashboard.css",
+        "components/layout.css"
     ];
 
     const scripts = [
