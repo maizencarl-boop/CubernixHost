@@ -2,38 +2,113 @@
 
 <main class="cubernix-dashboard">
 
+    <!-- Header -->
     <header class="cubernix-dashboard-header">
+
         <h1 class="cubernix-dashboard-title">
             Welcome to CubernixHosting
         </h1>
 
         <p class="cubernix-dashboard-subtitle">
-            Manage your servers quickly and easily.
+            Manage your servers and resources from one place.
         </p>
+
     </header>
 
+    <!-- Servers -->
     <section class="cubernix-server-grid">
 
+        <!-- Server 1 -->
         <article class="cubernix-server-card">
+
             <h2 class="cubernix-server-name">
                 Your Server
             </h2>
 
-            <div class="cubernix-server-status offline">
-                <span class="cubernix-status-dot"></span>
-                Offline
+            <div class="cubernix-server-info">
+
+                <span>
+                    CPU: 0%
+                </span>
+
+                <span>
+                    RAM: 0 MB / 0 MB
+                </span>
+
+                <span>
+                    Disk: 0 MB / 0 MB
+                </span>
+
             </div>
+
+            <div class="cubernix-server-status offline">
+
+                <span class="cubernix-status-dot"></span>
+
+                Offline
+
+            </div>
+
+            <a
+                href="#"
+                class="cubernix-server-button"
+            >
+                Manage Server
+            </a>
+
         </article>
 
+
+        <!-- Create server -->
         <article class="cubernix-server-card">
+
             <h2 class="cubernix-server-name">
                 Create a Server
             </h2>
 
-            <div class="cubernix-server-status">
-                <span class="cubernix-status-dot"></span>
-                Ready
+            <div class="cubernix-server-info">
+
+                <span>
+                    Deploy a new Minecraft server
+                </span>
+
+                <span>
+                    Configure resources and software
+                </span>
+
             </div>
+
+            <div class="cubernix-server-status">
+
+                <span class="cubernix-status-dot"></span>
+
+                Ready
+
+            </div>
+
+            <a
+                href="#"
+                class="cubernix-server-button"
+            >
+                Create Server
+            </a>
+
+        </article>
+
+
+        <!-- Empty state -->
+        <article class="cubernix-empty-state">
+
+            <h2 class="cubernix-empty-state-title">
+                More servers will appear here
+            </h2>
+
+            <p class="cubernix-empty-state-text">
+                Your CubernixHosting servers will be displayed
+                automatically once the panel is connected to
+                Pterodactyl.
+            </p>
+
         </article>
 
     </section>
