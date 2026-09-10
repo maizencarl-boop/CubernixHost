@@ -95,21 +95,50 @@
 
         </article>
 
+    </section>
 
-        <!-- Empty state -->
-        <article class="cubernix-empty-state">
 
-            <h2 class="cubernix-empty-state-title">
-                More servers will appear here
+    <!-- Background Settings -->
+    <section class="cubernix-dashboard-section">
+
+        <div class="cubernix-background-settings">
+
+            <h2 class="cubernix-background-title">
+                Panel Background
             </h2>
 
-            <p class="cubernix-empty-state-text">
-                Your CubernixHosting servers will be displayed
-                automatically once the panel is connected to
-                Pterodactyl.
+            <p class="cubernix-background-description">
+                Choose an image from your device to personalize
+                your CubernixHosting panel.
             </p>
 
-        </article>
+            <div class="cubernix-background-controls">
+
+                <label
+                    class="cubernix-background-button"
+                    for="cubernix-background-input"
+                >
+                    Choose Background
+                </label>
+
+                <input
+                    class="cubernix-background-input"
+                    id="cubernix-background-input"
+                    type="file"
+                    accept="image/png,image/jpeg,image/webp"
+                >
+
+                <button
+                    class="cubernix-background-button cubernix-background-reset"
+                    id="cubernix-background-reset"
+                    type="button"
+                >
+                    Reset Background
+                </button>
+
+            </div>
+
+        </div>
 
     </section>
 
