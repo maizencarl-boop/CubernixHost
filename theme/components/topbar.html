@@ -28,6 +28,7 @@
         <!-- Notifications -->
         <button
             class="cubernix-topbar-button"
+            id="cubernix-notifications-button"
             type="button"
             aria-label="Notifications"
             title="Notifications"
@@ -36,14 +37,75 @@
         </button>
 
         <!-- More options -->
-        <button
-            class="cubernix-topbar-button"
-            type="button"
-            aria-label="More options"
-            title="More options"
-        >
-            ⋮
-        </button>
+        <div class="cubernix-more-wrapper">
+
+            <button
+                class="cubernix-topbar-button"
+                id="cubernix-more-button"
+                type="button"
+                aria-label="More options"
+                aria-expanded="false"
+                title="More options"
+            >
+                ⋮
+            </button>
+
+            <div
+                class="cubernix-more-menu"
+                id="cubernix-more-menu"
+                hidden
+            >
+
+                <button
+                    class="cubernix-more-item"
+                    type="button"
+                    data-action="settings"
+                >
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </button>
+
+                <button
+                    class="cubernix-more-item"
+                    type="button"
+                    data-action="background"
+                >
+                    <span>🎨</span>
+                    <span>Background</span>
+                </button>
+
+                <button
+                    class="cubernix-more-item"
+                    type="button"
+                    data-action="plugins"
+                >
+                    <span>🧩</span>
+                    <span>Plugins</span>
+                </button>
+
+                <button
+                    class="cubernix-more-item"
+                    type="button"
+                    data-action="versions"
+                >
+                    <span>📦</span>
+                    <span>Versions</span>
+                </button>
+
+                <div class="cubernix-more-divider"></div>
+
+                <button
+                    class="cubernix-more-item danger"
+                    type="button"
+                    data-action="logout"
+                >
+                    <span>🚪</span>
+                    <span>Logout</span>
+                </button>
+
+            </div>
+
+        </div>
 
         <!-- User -->
         <button
