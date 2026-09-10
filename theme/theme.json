@@ -1,0 +1,18 @@
+{
+  "name": "CubernixHosting",
+  "version": "1.0.0",
+  "author": "CubernixHosting",
+  "description": "Custom mobile-friendly Pterodactyl theme for CubernixHosting",
+  "assets": {
+    "logo": "assets/cubernix-logo.png",
+    "stylesheet": "cubernix.css",
+    "javascript": "cubernix.js"
+  },
+  "features": {
+    "mobileFriendly": true,
+    "desktopFriendly": true,
+    "customBackground": true,
+    "startupMenu": true,
+    "networkMenu": true
+  }
+}
