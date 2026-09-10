@@ -1,0 +1,56 @@
+/* CubernixHosting Topbar */
+
+.cubernix-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 64px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: rgba(24, 27, 36, 0.92);
+    border-bottom: 1px solid var(--cubernix-border);
+    backdrop-filter: blur(12px);
+}
+
+.cubernix-topbar-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cubernix-topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cubernix-topbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--cubernix-border);
+    border-radius: 9px;
+    background: var(--cubernix-surface);
+    color: var(--cubernix-text);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cubernix-topbar-button:hover {
+    background: var(--cubernix-surface-hover);
+}
+
+@media (max-width: 768px) {
+    .cubernix-topbar {
+        padding: 10px 14px 10px 70px;
+    }
+
+    .cubernix-topbar-title {
+        font-size: 16px;
+    }
+}
