@@ -11,11 +11,14 @@
         "components/mobile-menu.css",
         "components/dashboard.css",
         "components/layout.css",
-        "components/topbar.css"
+        "components/topbar.css",
+        "components/background.css"
     ];
 
     const scripts = [
         "components/mobile-menu.js",
+        "components/topbar.js",
+        "components/background.js",
         "cubernix.js"
     ];
 
@@ -43,7 +46,10 @@
     }
 
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", loadTheme);
+        document.addEventListener(
+            "DOMContentLoaded",
+            loadTheme
+        );
     } else {
         loadTheme();
     }
