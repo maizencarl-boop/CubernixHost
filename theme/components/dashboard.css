@@ -1,0 +1,86 @@
+/* CubernixHosting Dashboard */
+
+.cubernix-dashboard {
+    width: 100%;
+    min-height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.cubernix-dashboard-header {
+    margin-bottom: 24px;
+}
+
+.cubernix-dashboard-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.cubernix-dashboard-subtitle {
+    margin: 6px 0 0;
+    color: var(--cubernix-muted);
+    font-size: 14px;
+}
+
+.cubernix-server-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.cubernix-server-card {
+    padding: 18px;
+    background: var(--cubernix-surface);
+    border: 1px solid var(--cubernix-border);
+    border-radius: 14px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cubernix-server-card:hover {
+    transform: translateY(-2px);
+    background: var(--cubernix-surface-hover);
+}
+
+.cubernix-server-name {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.cubernix-server-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #aeb4c0;
+}
+
+.cubernix-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #6b7280;
+}
+
+.cubernix-server-status.online .cubernix-status-dot {
+    background: #23a559;
+}
+
+.cubernix-server-status.offline .cubernix-status-dot {
+    background: #ed4245;
+}
+
+@media (max-width: 768px) {
+    .cubernix-dashboard {
+        padding: 70px 14px 20px;
+    }
+
+    .cubernix-dashboard-title {
+        font-size: 24px;
+    }
+
+    .cubernix-server-grid {
+        grid-template-columns: 1fr;
+    }
+}
