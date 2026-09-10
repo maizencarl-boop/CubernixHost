@@ -3,18 +3,58 @@
 :root {
     --cubernix-primary: #5865f2;
     --cubernix-primary-hover: #4752c4;
+
     --cubernix-background: #0f1117;
     --cubernix-surface: #181b24;
     --cubernix-surface-hover: #202431;
+
     --cubernix-text: #ffffff;
     --cubernix-muted: #9ca3af;
+
     --cubernix-border: rgba(255, 255, 255, 0.08);
+
+    --cubernix-background-image: none;
+}
+
+/* Base */
+
+html,
+body {
+    min-height: 100%;
 }
 
 body {
-    background: var(--cubernix-background);
+    margin: 0;
+    background:
+        linear-gradient(
+            rgba(15, 17, 23, 0.82),
+            rgba(15, 17, 23, 0.92)
+        ),
+        var(--cubernix-background-image),
+        var(--cubernix-background);
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
     color: var(--cubernix-text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
+
+/* Theme root */
+
+.cubernix-theme {
+    color-scheme: dark;
+}
+
+/* App */
+
+.cubernix-app {
+    position: relative;
+    z-index: 1;
+}
+
+/* Branding */
 
 .cubernix-brand {
     display: flex;
@@ -29,6 +69,8 @@ body {
     border-radius: 8px;
 }
 
+/* Cards */
+
 .cubernix-card {
     background: var(--cubernix-surface);
     border: 1px solid var(--cubernix-border);
@@ -40,7 +82,34 @@ body {
     background: var(--cubernix-surface-hover);
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+/* Mobile */
+
 @media (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
     .cubernix-brand img {
         width: 34px;
         height: 34px;
