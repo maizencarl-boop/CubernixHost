@@ -8,7 +8,8 @@
     const stylesheets = [
         "cubernix.css",
         "components/sidebar.css",
-        "components/mobile-menu.css"
+        "components/mobile-menu.css",
+        "components/dashboard.css"
     ];
 
     const scripts = [
