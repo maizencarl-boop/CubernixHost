@@ -4,21 +4,63 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 20px;
+
     width: 100%;
     min-height: 64px;
+
     padding: 10px 20px;
+
     box-sizing: border-box;
+
     background: rgba(24, 27, 36, 0.92);
+
     border-bottom: 1px solid var(--cubernix-border);
-    backdrop-filter: blur(12px);
+
+    backdrop-filter: blur(14px);
+}
+
+/* Left */
+
+.cubernix-topbar-left {
+    min-width: 0;
+}
+
+.cubernix-topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.cubernix-topbar-brand img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    border-radius: 9px;
 }
 
 .cubernix-topbar-title {
     margin: 0;
-    font-size: 18px;
+
+    font-size: 17px;
     font-weight: 700;
+
+    color: var(--cubernix-text);
 }
+
+.cubernix-topbar-subtitle {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    color: var(--cubernix-muted);
+}
+
+/* Actions */
 
 .cubernix-topbar-actions {
     display: flex;
@@ -26,31 +68,252 @@
     gap: 8px;
 }
 
+/* Standard buttons */
+
 .cubernix-topbar-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
+
+    width: 40px;
     height: 40px;
-    padding: 0 12px;
+
+    padding: 0;
+
     border: 1px solid var(--cubernix-border);
     border-radius: 9px;
+
     background: var(--cubernix-surface);
+
     color: var(--cubernix-text);
+
+    font-size: 17px;
+
     cursor: pointer;
-    transition: 0.2s ease;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .cubernix-topbar-button:hover {
     background: var(--cubernix-surface-hover);
+
+    border-color: rgba(88, 101, 242, 0.35);
+
+    transform: translateY(-1px);
 }
 
+/* More menu */
+
+.cubernix-more-wrapper {
+    position: relative;
+}
+
+.cubernix-more-menu {
+    position: absolute;
+
+    top: calc(100% + 9px);
+    right: 0;
+
+    z-index: 1100;
+
+    width: 190px;
+
+    padding: 7px;
+
+    background: rgba(24, 27, 36, 0.98);
+
+    border: 1px solid var(--cubernix-border);
+    border-radius: 12px;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(16px);
+}
+
+.cubernix-more-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 0 11px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--cubernix-text);
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.cubernix-more-item:hover {
+    background: var(--cubernix-surface-hover);
+}
+
+.cubernix-more-item.danger {
+    color: #ed4245;
+}
+
+.cubernix-more-divider {
+    height: 1px;
+
+    margin: 6px 4px;
+
+    background: var(--cubernix-border);
+}
+
+/* User button */
+
+.cubernix-user-button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    min-height: 40px;
+
+    padding: 4px 10px 4px 5px;
+
+    border: 1px solid var(--cubernix-border);
+    border-radius: 10px;
+
+    background: var(--cubernix-surface);
+
+    color: var(--cubernix-text);
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cubernix-user-button:hover {
+    background: var(--cubernix-surface-hover);
+
+    border-color: rgba(88, 101, 242, 0.35);
+}
+
+/* Avatar */
+
+.cubernix-user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 31px;
+    height: 31px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: var(--cubernix-primary);
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* User information */
+
+.cubernix-user-info {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-width: 0;
+}
+
+.cubernix-user-name {
+    font-size: 12px;
+    font-weight: 650;
+
+    color: var(--cubernix-text);
+}
+
+.cubernix-user-role {
+    margin-top: 1px;
+
+    font-size: 10px;
+
+    color: var(--cubernix-muted);
+}
+
+/* Mobile */
+
 @media (max-width: 768px) {
+
     .cubernix-topbar {
-        padding: 10px 14px 10px 70px;
+        min-height: 60px;
+
+        padding: 9px 12px 9px 68px;
+
+        gap: 10px;
+    }
+
+    .cubernix-topbar-brand img {
+        width: 34px;
+        height: 34px;
     }
 
     .cubernix-topbar-title {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    .cubernix-topbar-subtitle {
+        display: none;
+    }
+
+    .cubernix-topbar-actions {
+        gap: 5px;
+    }
+
+    .cubernix-topbar-button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .cubernix-more-menu {
+        position: fixed;
+
+        top: 59px;
+        right: 10px;
+
+        width: 210px;
+    }
+
+    .cubernix-user-button {
+        width: 36px;
+        height: 36px;
+
+        padding: 3px;
+
+        justify-content: center;
+    }
+
+    .cubernix-user-info {
+        display: none;
+    }
+
+    .cubernix-user-avatar {
+        width: 28px;
+        height: 28px;
     }
 }
