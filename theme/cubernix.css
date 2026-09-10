@@ -1,0 +1,52 @@
+/* CubernixHosting Pterodactyl Theme */
+
+:root {
+    --cubernix-primary: #5865f2;
+    --cubernix-primary-hover: #4752c4;
+    --cubernix-background: #0f1117;
+    --cubernix-surface: #181b24;
+    --cubernix-surface-hover: #202431;
+    --cubernix-text: #ffffff;
+    --cubernix-muted: #9ca3af;
+    --cubernix-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    background: var(--cubernix-background);
+    color: var(--cubernix-text);
+}
+
+.cubernix-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cubernix-brand img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.cubernix-card {
+    background: var(--cubernix-surface);
+    border: 1px solid var(--cubernix-border);
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.cubernix-card:hover {
+    background: var(--cubernix-surface-hover);
+}
+
+@media (max-width: 768px) {
+    .cubernix-brand img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .cubernix-card {
+        border-radius: 10px;
+    }
+}
