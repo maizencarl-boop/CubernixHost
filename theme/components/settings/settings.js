@@ -1,4 +1,4 @@
-// CubernixHosting Settings
+// CubernixHosting Settings Controls
 
 (function () {
     "use strict";
@@ -26,15 +26,73 @@
                         return;
                     }
 
-                    console.log(
-                        "CubernixHosting setting selected:",
-                        setting
-                    );
+                    if (setting === "background") {
+
+                        const backgroundInput =
+                            document.getElementById(
+                                "cubernix-background-input"
+                            );
+
+                        if (backgroundInput) {
+                            backgroundInput.click();
+                        }
+
+                        return;
+                    }
+
+                    if (setting === "appearance") {
+
+                        document.dispatchEvent(
+                            new CustomEvent(
+                                "cubernix:settings",
+                                {
+                                    detail: {
+                                        setting: "appearance"
+                                    }
+                                }
+                            )
+                        );
+
+                        return;
+                    }
+
+                    if (setting === "account") {
+
+                        document.dispatchEvent(
+                            new CustomEvent(
+                                "cubernix:settings",
+                                {
+                                    detail: {
+                                        setting: "account"
+                                    }
+                                }
+                            )
+                        );
+
+                        return;
+                    }
+
+                    if (setting === "panel") {
+
+                        document.dispatchEvent(
+                            new CustomEvent(
+                                "cubernix:settings",
+                                {
+                                    detail: {
+                                        setting: "panel"
+                                    }
+                                }
+                            )
+                        );
+
+                        return;
+                    }
 
                 }
             );
 
         });
+
     }
 
     if (document.readyState === "loading") {
