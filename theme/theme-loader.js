@@ -14,6 +14,7 @@
         "components/topbar.css",
         "components/background.css",
         "components/settings/settings.css"
+        "components/settings/appearance.css",
     ];
 
     const scripts = [
