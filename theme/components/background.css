@@ -1,0 +1,122 @@
+/* CubernixHosting Background Settings */
+
+.cubernix-background-settings {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background: var(--cubernix-surface);
+
+    border: 1px solid var(--cubernix-border);
+
+    border-radius: 14px;
+}
+
+
+.cubernix-background-title {
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.cubernix-background-description {
+    margin: 0;
+
+    color: var(--cubernix-muted);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.cubernix-background-controls {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.cubernix-background-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--cubernix-border);
+
+    border-radius: 9px;
+
+    background: var(--cubernix-primary);
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.cubernix-background-button:hover {
+    background: var(--cubernix-primary-hover);
+}
+
+
+.cubernix-background-reset {
+    background: var(--cubernix-surface-hover);
+}
+
+
+.cubernix-background-reset:hover {
+    background: var(--cubernix-surface-hover);
+}
+
+
+.cubernix-background-input {
+    display: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .cubernix-background-settings {
+        padding: 14px;
+
+        border-radius: 10px;
+    }
+
+
+    .cubernix-background-controls {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .cubernix-background-button {
+        width: 100%;
+    }
+
+}
