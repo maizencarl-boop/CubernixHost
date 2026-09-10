@@ -1,4 +1,4 @@
-// CubernixHosting Sidebar Navigation
+ // CubernixHosting Sidebar Navigation
 
 (function () {
     "use strict";
@@ -8,12 +8,26 @@
             ".cubernix-sidebar-item"
         );
 
+        const sidebar = document.querySelector(
+            ".cubernix-sidebar"
+        );
+
+        const overlay = document.getElementById(
+            "cubernix-sidebar-overlay"
+        );
+
+        const menuButton = document.getElementById(
+            "cubernix-menu-button"
+        );
+
         if (!sidebarItems.length) {
             return;
         }
 
         sidebarItems.forEach(function (item) {
+
             item.addEventListener("click", function (event) {
+
                 event.preventDefault();
 
                 sidebarItems.forEach(function (otherItem) {
@@ -32,19 +46,45 @@
                 }
 
                 /*
-                 * Real Pterodactyl routes will be connected later.
-                 * For now this only changes the active UI state.
+                 * Close mobile sidebar after navigation.
                  */
+
+                if (sidebar) {
+                    sidebar.classList.remove("open");
+                }
+
+                if (overlay) {
+                    overlay.classList.remove("open");
+                }
+
+                if (menuButton) {
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuButton.setAttribute(
+                        "aria-label",
+                        "Open menu"
+                    );
+                }
+
             });
+
         });
     }
 
     if (document.readyState === "loading") {
+
         document.addEventListener(
             "DOMContentLoaded",
             initSidebar
         );
+
     } else {
+
         initSidebar();
+
     }
+
 })();
