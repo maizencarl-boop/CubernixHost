@@ -22,6 +22,7 @@
         "components/topbar.js",
         "components/background.js",
         "components/settings/settings.js",
+        "components/page-switcher.js",
         "cubernix.js"
     ];
 
