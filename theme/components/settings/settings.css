@@ -1,0 +1,179 @@
+/* CubernixHosting Settings */
+
+.cubernix-settings {
+    width: 100%;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+}
+
+.cubernix-settings-header {
+    margin-bottom: 24px;
+}
+
+.cubernix-settings-title {
+    margin: 0;
+
+    font-size: 26px;
+    font-weight: 750;
+
+    color: var(--cubernix-text);
+}
+
+.cubernix-settings-subtitle {
+    margin: 7px 0 0;
+
+    color: var(--cubernix-muted);
+
+    font-size: 14px;
+}
+
+
+/* Settings grid */
+
+.cubernix-settings-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 16px;
+}
+
+
+/* Settings card */
+
+.cubernix-settings-card {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 20px;
+
+    background: rgba(24, 27, 36, 0.9);
+
+    border: 1px solid var(--cubernix-border);
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cubernix-settings-card:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(88, 101, 242, 0.35);
+}
+
+
+/* Icon */
+
+.cubernix-settings-card-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 15px;
+
+    border-radius: 11px;
+
+    background:
+        rgba(88, 101, 242, 0.14);
+
+    font-size: 20px;
+}
+
+
+/* Content */
+
+.cubernix-settings-card-content {
+    flex: 1;
+}
+
+.cubernix-settings-card-content h3 {
+    margin: 0 0 7px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--cubernix-text);
+}
+
+.cubernix-settings-card-content p {
+    margin: 0;
+
+    color: var(--cubernix-muted);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* Button */
+
+.cubernix-settings-card-button {
+    width: 100%;
+
+    min-height: 40px;
+
+    margin-top: 18px;
+
+    border: 1px solid var(--cubernix-border);
+
+    border-radius: 9px;
+
+    background: var(--cubernix-primary);
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.cubernix-settings-card-button:hover {
+    background: var(--cubernix-primary-hover);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .cubernix-settings {
+        padding: 22px 14px 24px;
+    }
+
+    .cubernix-settings-title {
+        font-size: 23px;
+    }
+
+    .cubernix-settings-grid {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .cubernix-settings-card {
+        padding: 17px;
+
+        border-radius: 13px;
+    }
+}
