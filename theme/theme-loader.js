@@ -16,6 +16,7 @@
     ];
 
     const scripts = [
+        "components/sidebar.js",
         "components/mobile-menu.js",
         "components/topbar.js",
         "components/background.js",
