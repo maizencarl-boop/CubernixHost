@@ -13,8 +13,9 @@
         "components/dashboard.css",
         "components/topbar.css",
         "components/background.css",
-        "components/settings/settings.css"
-        "components/settings/appearance.css",
+        "components/plugins.css",
+        "components/settings/settings.css",
+        "components/settings/appearance.css"
     ];
 
     const scripts = [
@@ -24,6 +25,7 @@
         "components/background.js",
         "components/settings/settings.js",
         "components/settings/settings-controls.js",
+        "components/plugins.js",
         "components/page-switcher.js",
         "cubernix.js"
     ];
