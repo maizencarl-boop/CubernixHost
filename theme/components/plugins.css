@@ -1,0 +1,374 @@
+/* CubernixHosting Plugin Installer */
+
+.cubernix-plugins {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.cubernix-plugins-header {
+    margin-bottom: 24px;
+}
+
+.cubernix-plugins-title {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cubernix-text);
+}
+
+.cubernix-plugins-subtitle {
+    margin: 0;
+    color: var(--cubernix-muted);
+    font-size: 14px;
+}
+
+/* Search */
+
+.cubernix-plugin-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    margin-bottom: 28px;
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    background: var(--cubernix-surface);
+    border: 1px solid var(--cubernix-border);
+    border-radius: 12px;
+
+    transition: border-color 0.2s ease,
+                background 0.2s ease;
+}
+
+.cubernix-plugin-search:focus-within {
+    border-color: var(--cubernix-primary);
+}
+
+.cubernix-plugin-search-icon {
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+.cubernix-plugin-search-input {
+    width: 100%;
+    min-width: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: var(--cubernix-text);
+
+    font-size: 14px;
+}
+
+.cubernix-plugin-search-input::placeholder {
+    color: var(--cubernix-muted);
+}
+
+/* Sections */
+
+.cubernix-plugin-section {
+    margin-bottom: 32px;
+}
+
+.cubernix-plugin-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+}
+
+.cubernix-plugin-section-header h2 {
+    margin: 0 0 6px;
+
+    color: var(--cubernix-text);
+    font-size: 19px;
+    font-weight: 650;
+}
+
+.cubernix-plugin-section-header p {
+    margin: 0;
+
+    color: var(--cubernix-muted);
+    font-size: 13px;
+}
+
+/* Plugin Grid */
+
+.cubernix-plugin-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+/* Plugin Card */
+
+.cubernix-plugin-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    min-width: 0;
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    background: var(--cubernix-surface);
+    border: 1px solid var(--cubernix-border);
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cubernix-plugin-card:hover {
+    background: var(--cubernix-surface-hover);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Plugin Icon */
+
+.cubernix-plugin-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 46px;
+    height: 46px;
+
+    background: rgba(88, 101, 242, 0.12);
+    border: 1px solid rgba(88, 101, 242, 0.2);
+    border-radius: 10px;
+
+    font-size: 22px;
+}
+
+/* Plugin Content */
+
+.cubernix-plugin-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.cubernix-plugin-content h3 {
+    margin: 0 0 6px;
+
+    color: var(--cubernix-text);
+    font-size: 16px;
+    font-weight: 650;
+}
+
+.cubernix-plugin-content p {
+    margin: 0;
+
+    color: var(--cubernix-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Plugin Metadata */
+
+.cubernix-plugin-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    margin-top: 12px;
+}
+
+.cubernix-plugin-meta span {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 4px 8px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--cubernix-border);
+    border-radius: 6px;
+
+    color: var(--cubernix-muted);
+    font-size: 11px;
+}
+
+/* Install Button */
+
+.cubernix-plugin-install {
+    flex-shrink: 0;
+
+    padding: 8px 12px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: var(--cubernix-primary);
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.cubernix-plugin-install:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* Empty State */
+
+.cubernix-plugin-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 180px;
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: var(--cubernix-surface);
+    border: 1px solid var(--cubernix-border);
+    border-radius: 12px;
+}
+
+.cubernix-plugin-empty span {
+    margin-bottom: 10px;
+    font-size: 34px;
+}
+
+.cubernix-plugin-empty strong {
+    margin-bottom: 6px;
+
+    color: var(--cubernix-text);
+    font-size: 16px;
+}
+
+.cubernix-plugin-empty small {
+    max-width: 420px;
+
+    color: var(--cubernix-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Search Empty State */
+
+.cubernix-plugin-search-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    grid-column: 1 / -1;
+
+    min-height: 180px;
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: var(--cubernix-surface);
+    border: 1px solid var(--cubernix-border);
+    border-radius: 12px;
+}
+
+.cubernix-plugin-search-empty span {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.cubernix-plugin-search-empty strong {
+    margin-bottom: 6px;
+
+    color: var(--cubernix-text);
+    font-size: 16px;
+}
+
+.cubernix-plugin-search-empty small {
+    color: var(--cubernix-muted);
+    font-size: 13px;
+}
+
+.cubernix-plugin-card[hidden],
+.cubernix-plugin-search-empty[hidden] {
+    display: none;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .cubernix-plugin-grid {
+        grid-template-columns:
+            repeat(1, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .cubernix-plugins {
+        padding: 18px 14px;
+    }
+
+    .cubernix-plugins-title {
+        font-size: 23px;
+    }
+
+    .cubernix-plugins-subtitle {
+        font-size: 13px;
+    }
+
+    .cubernix-plugin-card {
+        padding: 14px;
+    }
+
+    .cubernix-plugin-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .cubernix-plugin-install {
+        padding: 7px 10px;
+    }
+
+    .cubernix-plugin-empty,
+    .cubernix-plugin-search-empty {
+        min-height: 150px;
+        padding: 24px;
+    }
+}
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+    .cubernix-plugin-card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .cubernix-plugin-install {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
